@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class Welcome extends Component {
   render() {
@@ -8,12 +9,12 @@ export default class Welcome extends Component {
           <div className="col-md-6 m-auto">
             <div className="card card-body text-center">
               <p>Create an account or login</p>
-              <a href="/register" className="btn btn-primary btn-block mb-2">
+              <Link to={"/register"} className="btn btn-primary btn-block mb-2">
                 Register{" "}
-              </a>
-              <a href="/login" className="btn btn-secondary btn-block">
+              </Link>
+              <Link to={"/login"} className="btn btn-secondary btn-block">
                 Login
-              </a>
+              </Link>
             </div>
           </div>
         </div>

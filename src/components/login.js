@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 
 export default class Login extends Component {
   state = {
@@ -36,7 +36,7 @@ export default class Login extends Component {
       alert("logged in");
       localStorage.setItem("userName", this.state.user.name);
       localStorage.setItem("userCity", this.state.user.city);
-      return <Redirect to="/dashboard" />;
+      return <Redirect to={"/dashboard"} />;
     }
 
     return (
@@ -88,7 +88,7 @@ export default class Login extends Component {
                 fontWeight: "bold",
               }}
             >
-              No Account? <a href="/register">Register</a>
+              No Account? <Link to={"/register"}>Register</Link>
             </p>
           </div>
         </div>
