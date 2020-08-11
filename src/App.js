@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.css";
 import Dashboard from "./components/dashboard";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Login from "./components/login";
