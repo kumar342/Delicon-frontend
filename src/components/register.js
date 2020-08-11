@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 
 export default class Register extends Component {
   state = {
@@ -30,7 +30,7 @@ export default class Register extends Component {
 
   render() {
     if (this.state.isRegistered) {
-      return <Redirect to="/login" />;
+      return <Redirect to={"/login"} />;
     }
 
     return (
@@ -101,7 +101,7 @@ export default class Register extends Component {
                 fontWeight: "bold",
               }}
             >
-              Have An Account? <a href="/login">Login</a>
+              Have An Account? <Link to={"/login"}>Login</Link>
             </p>
           </div>
         </div>
