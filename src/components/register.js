@@ -15,7 +15,7 @@ export default class Register extends Component {
     const name = this.refs.name.value;
     const city = this.refs.city.value;
     axios
-      .post("http://18.219.11.242/register", { email, password, name, city })
+      .post("http://18.191.212.88/register", { email, password, name, city })
       .then((res) => {
         if (res.data) {
           this.setState({

@@ -120,7 +120,7 @@ export default class Dashboard extends Component {
 
   getData = () => {
     axios
-      .get("http://18.219.11.242/totalReservations")
+      .get("http://18.191.212.88/totalReservations")
       .then((res) => {
         console.log(res);
         this.setState({
@@ -143,7 +143,7 @@ export default class Dashboard extends Component {
     let id = e.target.value;
     console.log(e.target.value, "id");
     axios
-      .put(`http://18.219.11.242/totalReservations/${id}`, {
+      .put(`http://18.191.212.88/totalReservations/${id}`, {
         name: this.state.name,
         email: this.state.email,
         mobile_number: this.state.mobile_number,
@@ -177,7 +177,7 @@ export default class Dashboard extends Component {
   deleteData = async (e) => {
     let id = e.target.value;
     await axios
-      .delete(`http://18.219.11.242/totalReservations/${id}`)
+      .delete(`http://18.191.212.88/totalReservations/${id}`)
       .then(async (res) => {
         console.log(res.data);
 
@@ -213,7 +213,7 @@ export default class Dashboard extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://18.219.11.242/add", {
+      .post("http://18.191.212.88/add", {
         name: this.state.name,
         email: this.state.email,
         mobile_number: this.state.mobile_number,
@@ -243,7 +243,7 @@ export default class Dashboard extends Component {
 
   getDataById = async () => {
     await axios
-      .get(`http://18.219.11.242/totalReservations/${this.state.Id}`)
+      .get(`http://18.191.212.88/totalReservations/${this.state.Id}`)
       .then((res) => {
         console.log(res);
         this.setState({
@@ -283,10 +283,10 @@ export default class Dashboard extends Component {
               style={{ backgroundColor: "#0074D9" }}
             >
               <i className="fa fa-user-o" style={{ color: "white" }}></i>&nbsp;
-              <a className="navbar-brand" href="/#">
+              <span className="navbar-brand">
                 &nbsp;Welcome {this.state.userName}
                 <br />
-              </a>
+              </span>
             </nav>
           </div>
           <div className="header">

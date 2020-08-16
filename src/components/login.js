@@ -15,7 +15,7 @@ export default class Login extends Component {
     const email = this.refs.email.value;
     const password = this.refs.password.value;
     axios
-      .post("http://18.219.11.242/login", { email, password })
+      .post("http://18.191.212.88/login", { email, password })
       .then((res) => {
         console.log(res, "login response");
         if (res.data.user) {
